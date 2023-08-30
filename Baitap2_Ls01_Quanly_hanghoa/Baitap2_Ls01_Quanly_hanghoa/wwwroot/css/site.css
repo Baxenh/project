@@ -1,0 +1,52 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+table {
+    width: 1000px;
+}
+
+    table thead {
+        border-bottom: 2px solid #aaa;
+    }
+
+        table thead tr th {
+            padding: 1px 2px 1px 10px;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+    table tbody tr {
+        border-bottom: 1px solid #aaa;
+    }
+
+        table tbody tr td img {
+            width: 80px;
+            height: 60px;
+        }
+
+        table tbody tr td .btn-primary {
+            width: 50px;
+            height: auto;
+            background: green;
+            text-align: center;
+        }
