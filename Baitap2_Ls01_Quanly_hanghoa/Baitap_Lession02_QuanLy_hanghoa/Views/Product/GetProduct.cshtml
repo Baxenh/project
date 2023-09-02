@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Get Product";
+}
+
+<h1>Get Product</h1>
+<hr />
+<div class="border my-3 p-4">
+    <h2>Truy cập đối tượng từ ViewBag</h2>
+    <p>Mã sản phẩm: @ViewBag.product.ProductId</p>
+    <p>Tên sản phẩm: @ViewBag.product.ProductName</p>
+    <p> Năm sản xuất: @ViewBag.product.YearRelease</p>
+    <p>Giá: @ViewBag.product.Price</p>
+
+    <h2>Dữ liệu lấy từ ViwData</h2>
+</div>
+@{
+    var product = ViewData["productVD"] as Baitap_Lession02_QuanLy_hanghoa.Models.Product;
+}
+
+<div class="border my-3 p-4">
+<h2>Truy cập đối tượng từ ViewData</h2>
+<p>Mã sản phẩm: @product.ProductId</p>
+<p>Tên sản phẩm: @product.ProductName</p>
+<p> Năm sản xuất: @product.YearRelease</p>
+<p>Giá: @product.Price</p>
+</div>
