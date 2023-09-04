@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Categories";
+   var categoriess= ViewBag.Categoriess;
+}
+
+<h1 style="text-transform:uppercase; font-size:18px; font-weight:bolder;">Danh mục</h1>
+
+<div class="column">
+@foreach (var item in categoriess)
+{
+    <div class="col-md-3">
+        <div class="category-text" style="
+        width:240px;height:30px;border-radius:1px;">
+            <h3>  <a asp-route="Product" class="btn btn-primary btn-block"
+                   style="width:100%;height:100%; text-align:left;font-size:18px"> @item.CategoryName</a>
+            </h3>
+        </div>
+
+    </div>
+}
+</div>

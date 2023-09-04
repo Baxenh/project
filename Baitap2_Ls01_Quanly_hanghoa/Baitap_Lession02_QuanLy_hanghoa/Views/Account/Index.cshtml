@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    var accounts = ViewBag.accounts;
+}
+
+<div class="row">
+    @foreach(var item in accounts)    {
+
+        <div class="col-md-4">
+            <div class="img-thumbnail">
+                <img src="@item.Avatar" alt="" style="width:50%" />
+                <div class="caption">
+                    <h3> @item.Name</h3>
+                    <p>@item.Bio</p>
+                    <p> <a asp-route="profile" asp-route-id="@item.Id" class="btn btn-success btn-block"> Profile</a> </p> @*asp-controller="Account" asp-action="Profile"*@
+                </div>
+            </div>
+        </div>
+        
+    }
+</div>
+

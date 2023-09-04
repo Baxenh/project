@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Category";
+    var categories = ViewBag.Categories;
+   
+}
+
+<h1>DANH MỤC</h1>
+
+@foreach (var item in categories)
+{
+    <div class="col-md-3">
+        <div class="category-text">
+            <h3>@item.CategoryName</h3>
+        </div>
+    </div>
+}

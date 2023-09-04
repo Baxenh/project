@@ -46,9 +46,78 @@ table {
         }
 
         table tbody tr td .btn-primary {
-            width: 50px;
+            width: 80px;
             height: auto;
             background: green;
             text-align: center;
             cursor:pointer;
+            border-radius:2px;
         }
+
+       /*index ::Category */
+.row {
+    display:flex;
+
+}
+.row .content{
+    display:flex;
+}
+
+    .row .content .category-content{
+        font-size:20px;
+        color:#000;
+        text-transform:uppercase;
+    }
+
+    .row .content .product-content {
+        font-size: 20px;
+        color: #000;
+        margin:0 250px;
+        text-transform:capitalize;
+    }
+    .row .thumbnail {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        align-items: center;
+        text-align: center;
+    }
+.row .thumbnail img {
+    width:100%;
+    height:auto;
+    padding:1px; 
+
+}
+
+.row .thumbnail .caption{
+    text-align:inherit;
+
+}
+
+ .row .thumbnail .caption .title{
+     text-align:justify;
+     font-size:20px;
+     text-align:center;
+     text-decoration:none;
+     text-transform:capitalize;
+ }
+    .row .thumbnail .caption .price-title {
+        display: inline-flex;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        color: #000;
+    }
+        .row .thumbnail .caption .price{
+            padding:0 1px;
+
+           
+            }
+    .row .thumbnail .caption .saleprice {
+        padding: 0 10px;
+        color:#ff0000;
+        font-weight: bolder;
+    }
+    .btn-success {
+        font-size:16px;
+        width: 80%;
+    }

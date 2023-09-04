@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "DetailPro";
+    var detailPro = ViewBag.DetailPro;
+}
+
+
+
+<h1>Chi tiết sản phẩm</h1>
+<div class="row">
+    <div class="col-md-4">
+        <img src="@detailPro.Avatar" alt="" style="width:80%" />
+
+    </div>
+    <div class="col-md-8">
+        <h2>Sản phẩm: @detailPro.Name</h2>
+        <h3 style=" text-decoration:line-through">Giá gốc: @detailPro.Price đồng</h3>
+        <h3 style="color:#fb8500;">Giá mới: @detailPro.SalePrice đồng</h3>
+        <h3 style="color:#000; font-size:16px;">
+            Mô tả:
+            @detailPro.Description
+        </h3>
+        <h3>
+            Trạng thái:
+            @if (detailPro.Status == 1)
+            {
+                <span> Còn hàng</span>
+            }
+            else
+            {
+                <span>Hết hàng</span>
+            }
+        </h3>
+        <h3>Ngày đăng: @detailPro.CreateAt</h3>
+        <p> <a asp-controller="Product" asp-action="Index" class="btn btn-primary btn-block" style="background:red; font-size:18px;"> Về danh sách</a> </p>
+    </div>
+</div>
+
+
