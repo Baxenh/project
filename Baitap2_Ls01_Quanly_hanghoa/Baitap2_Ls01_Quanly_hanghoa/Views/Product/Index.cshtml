@@ -1,43 +1,43 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-    var products = ViewBag.products;
-    var categories = ViewBag.Categories;
-    
+﻿@{
+    ViewData["Title"] = "List product";
+    var products = ViewBag.Products as List<Baitap2_Ls01_Quanly_hanghoa.Models.Product>;
+    var categories = ViewBag.Categories as List<Baitap2_Ls01_Quanly_hanghoa.Models.Category>;
 
 }
 
 
-<div class="row" style="border:1px solid #cccc">
-
-    <div class="row" >
-        <div class="col-md-12">
-            <div class="content">
-                <h3 class="category-content">Danh mục</h3>
-                <h1 class="product-content">Danh sách sản phẩm</h1>
-            </div>
-        </div>
-
-        <div class="row" style="border:1px solid #cccc">
-            @foreach (var item in products)
-            {
-                <div class="col-md-3">
-                    <div class="thumbnail" style="align-items:center">
-                        <img src="@item.Avatar" alt="" style="width:100%;  align-items:center" />
-                        <div class="caption">
-                            <h3 class="title">@item.Name</h3>
-                            <div class="price-title">
-                                <p class="price" style="text-decoration: line-through;">Giá cũ:@item.Price đồng</p>
-                                <p class="saleprice">Giá:@item.SalePrice đồng</p>
+<div class="container d-flex mf-2">
+    <div class="col-md-3 m-1">
+        <ul class="list-group">
+            <li class="list-group-item active" aria-current="true"> DANH MỤC</li>
+            @{
+                foreach(var item in categories)
+                {
+                    <li class="list-group-item"> 
+                    @* <a href="/Product/Index/@item.Id" style="text-decoration:none">@item.Name</a>*@
+                        <a href="san-pham/@item.Id" style="text-decoration:none">@item.Name</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <h1 style="text-transform:uppercase; font-size:20px; font-weight:bolder;">Danh sách sản phẩm</h1>
+        <div class="d-flex flex-wrap">
+            @{
+                foreach (var item in products)
+                {
+                    <div class="card m-2" style="width:13rem;">
+                        <img src="@item.Image"class="card-img-top" alt="@item.Name" />
+                            <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                                    <p class="card-text"> <del>@item.Price</del><span class="m-1">@item.SalePrice</span> </p>
+                                    <a href="#" class="btn btn-primary">Xem chi tiết</a>
                             </div>
-                            <p> <a asp-route="Detail" asp-route-id="@item.Id" class="btn btn-success btn-block"> Chi tiết</a> </p> @*asp-controller="Account" asp-action="Chi tiết"  asp-controller="Product" asp-action="Detail" *@
-                        </div>
                     </div>
-                </div>
+                }
             }
         </div>
     </div>
+
 </div>
-
-
-                 

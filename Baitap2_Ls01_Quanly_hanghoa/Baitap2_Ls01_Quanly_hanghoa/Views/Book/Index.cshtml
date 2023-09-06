@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Baitap2_Ls01_Quanly_hanghoa.Models.Book>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Danh sách các cuốn sách</h2>
+@* Hiển thị combombox trên form *@
+<form action="" method="post" class="form-inline d-flex" role="form">
+    <div class="form-group d-flex">
+        <select name="AuthorId" class="form-control  m-2" asp-items="@ViewBag.authors"> 
+            <option value=""> Chọn tác giả</option>
+            <i class="fa-solid fa-chevron-down"></i>
+        </select>
+        <select name="GenreId" class="form-control m-2" asp-items="@ViewBag.genres">
+            <option value=""> Chọn thẻ loại</option>
+            <i class="fa-solid fa-chevron-down"></i>
+        </select>        
+    </div>
+    <button type="submit" class="btn btn-primary m-2">Tìm kiếm</button>
+    <a asp-action="create" class="btn btn-danger m-2"> Thêm mới</a>
+</form>
+<hr />
+@* Hiển thị danh sách các cuốn sách *@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Tiêu đề</th>
+            <th>Tác giả</th>
+            <th>Thể loại</th>
+            <th>Giá</th>
+            <th>Hình ảnh</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var book in Model)
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.Title</td>
+                <td>@book.AuthorId</td>
+                <td>@book.GenderId</td>
+                <td>@book.Price</td>
+                <td>
+                    <img src="@book.Image" alt="@book.Title" width="40"/> 
+                </td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-sm btn-primary" > Sửa </a>
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>

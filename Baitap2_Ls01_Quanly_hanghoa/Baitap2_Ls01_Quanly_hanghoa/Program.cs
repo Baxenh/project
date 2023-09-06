@@ -25,8 +25,8 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
-    name: "Product",
-    pattern: "Danh-sach-san-pham/{id?}",
+    name: "san-pham",
+    pattern: "san-pham/{id?}",
     defaults: new { controller = "Product", action = "Index" }
     );
 

@@ -1,9 +1,8 @@
-﻿namespace Baitap_Lession02_QuanLy_hanghoa.Models
+﻿namespace Baitap2_Ls01_Quanly_hanghoa.Models
 {
     public class Category
     {
-        public int CategoryId { get; set; }
-        public string CategoryName { get; set; }
-        
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

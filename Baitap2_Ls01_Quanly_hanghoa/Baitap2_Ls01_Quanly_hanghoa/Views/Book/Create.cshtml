@@ -1,0 +1,38 @@
+﻿@model Baitap2_Ls01_Quanly_hanghoa.Models.Book
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Thêm danh sách mới</h2>
+<form action="" class="ml-3 mr-3" method="POST" enctype="multipart/form-data" >
+   <div class="form-group">
+       <label asp-for="Title"> Tên sách</label>
+       <input type="text" class="form-control" asp-for="Title" placeholder="Tên sách" />
+   </div> 
+   <div class="form-group">
+       <label asp-for="AuthorId">Tác giả</label>
+       <select asp-for="AuthorId" class="form-control" asp-items="@ViewBag.auhors">
+           <option value="">Chọn tác giả</option>
+       </select>
+   </div>
+    <div class="form-group">
+        <label asp-for="GenderId">Thể loại</label>
+        <select asp-for="GenderId" class="form-control" asp-items="@ViewBag.genres">
+            <option value="">Chọn thẻ loại</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Giá sách</label>
+        <input type="text" class="form-control" asp-for="Price" placeholder="Giá sách" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Image">Hình ảnh</label>
+        <input type="file" class="form-control" asp-for="Image"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Sumary">Giới thiệu ngắn</label>
+        <textarea class="form-control" asp-for="Sumary" placeholder="Nội dung giới thiệu..." ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu</button>
+</form>
+
