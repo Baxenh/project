@@ -1,0 +1,31 @@
+﻿@model IList<Lession04.Models.DataModels.Member>
+@{
+    ViewData["Title"] = "List Member";
+    var stt = 0;
+}
+
+
+
+<h2> Danh sách thành viên</h2>
+<a href="create" class="btn btn-primary" m-2>Thêm mới</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Mã thành viên</th>
+        <th>Username</th>
+        <th>FullName</th>
+        <th>Password</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var m in Model)
+    {
+        stt ++;
+        <tr>
+            <td>@m.MemberId</td>
+            <td>@m.UserName</td>
+            <td>@m.FullName</td>
+            <td>@m.Password</td>
+            <td>@m.Email</td>
+
+        </tr>
+    }
+</table>

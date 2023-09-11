@@ -1,0 +1,28 @@
+﻿@model Lession04.Models.DataModels.Member;
+@{
+    ViewData["Title"] = "Thông tin member";
+    //nếu sử dụng ViewBag chuyển kiểu
+    // var member = ViewBag.member as Lession04.Models.DataModels.Member;
+
+    //nếu sử dụng Model chuyển kiểu
+    var member = Model as Lession04.Models.DataModels.Member;
+}
+
+<h1>Thông tin member</h1>
+
+
+ //nếu sử dụng ViewBag chuyển kiểu
+  //  var member= Model as Lession04.Models.DataModels.Member;
+<p> Member ID:@member.MemberId</p>
+<p> UserName:@member.UserName</p>
+<p> Password: @member.Password</p>
+<p> FullName:@member.FullName</p>
+<p> Email: @member.Email</p>
+
+
+@* 
+<p> Member Id: @ViewBag.member.MemberId</p>
+<p> MemberName:ViewBag.member.MemberName</p>
+<p> Password: @ViewBag.member.Password</p>
+<p> FullName: @ViewBag.member.FullName</p>
+<p> Email: @ViewBag.member.Email</p> *@

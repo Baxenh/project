@@ -1,0 +1,8 @@
+D:\Learning\GitHub\project\Baitap2_Ls01_Quanly_hanghoa\Lession04_Lab_Tulam\obj\Debug\net7.0\Lession04_Lab_Tulam.csproj.AssemblyReference.cache
+D:\Learning\GitHub\project\Baitap2_Ls01_Quanly_hanghoa\Lession04_Lab_Tulam\obj\Debug\net7.0\Lession04_Lab_Tulam.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning\GitHub\project\Baitap2_Ls01_Quanly_hanghoa\Lession04_Lab_Tulam\obj\Debug\net7.0\Lession04_Lab_Tulam.AssemblyInfoInputs.cache
+D:\Learning\GitHub\project\Baitap2_Ls01_Quanly_hanghoa\Lession04_Lab_Tulam\obj\Debug\net7.0\Lession04_Lab_Tulam.AssemblyInfo.cs
+D:\Learning\GitHub\project\Baitap2_Ls01_Quanly_hanghoa\Lession04_Lab_Tulam\obj\Debug\net7.0\Lession04_Lab_Tulam.csproj.CoreCompileInputs.cache
+D:\Learning\GitHub\project\Baitap2_Ls01_Quanly_hanghoa\Lession04_Lab_Tulam\obj\Debug\net7.0\Lession04_Lab_Tulam.MvcApplicationPartsAssemblyInfo.cache
+D:\Learning\GitHub\project\Baitap2_Ls01_Quanly_hanghoa\Lession04_Lab_Tulam\obj\Debug\net7.0\Lession04_Lab_Tulam.RazorAssemblyInfo.cache
+D:\Learning\GitHub\project\Baitap2_Ls01_Quanly_hanghoa\Lession04_Lab_Tulam\obj\Debug\net7.0\Lession04_Lab_Tulam.RazorAssemblyInfo.cs
