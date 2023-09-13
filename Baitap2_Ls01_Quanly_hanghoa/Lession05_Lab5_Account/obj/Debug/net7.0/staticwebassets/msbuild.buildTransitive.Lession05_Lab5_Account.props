@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Lession05_Lab5_Account.props" />
+</Project>

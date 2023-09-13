@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lession04", "Lession04\Less
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lession04_Lab", "Lession04_Lab\Lession04_Lab.csproj", "{8A73E4AC-31DF-4688-9465-6E8E0B0D64C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lession04_Product", "Lession04_Product\Lession04_Product.csproj", "{59035F89-6EEF-424E-9DE3-848868BE7038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lession04_Product", "Lession04_Product\Lession04_Product.csproj", "{59035F89-6EEF-424E-9DE3-848868BE7038}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lession05", "Lession05\Lession05.csproj", "{B5C5959C-B9C3-405F-81DE-314C065C82B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lession05_App_Account", "App_Account\Lession05_App_Account.csproj", "{9497E1A9-013D-478B-88D1-18C1EDEED62D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lession05_Tulam_Product_Category", "Lession05_Tulam_Product_Category\Lession05_Tulam_Product_Category.csproj", "{46A1B5E7-621C-4044-9A07-29B718040743}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{59035F89-6EEF-424E-9DE3-848868BE7038}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59035F89-6EEF-424E-9DE3-848868BE7038}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59035F89-6EEF-424E-9DE3-848868BE7038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C5959C-B9C3-405F-81DE-314C065C82B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C5959C-B9C3-405F-81DE-314C065C82B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C5959C-B9C3-405F-81DE-314C065C82B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C5959C-B9C3-405F-81DE-314C065C82B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9497E1A9-013D-478B-88D1-18C1EDEED62D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9497E1A9-013D-478B-88D1-18C1EDEED62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9497E1A9-013D-478B-88D1-18C1EDEED62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9497E1A9-013D-478B-88D1-18C1EDEED62D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A1B5E7-621C-4044-9A07-29B718040743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A1B5E7-621C-4044-9A07-29B718040743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A1B5E7-621C-4044-9A07-29B718040743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A1B5E7-621C-4044-9A07-29B718040743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
