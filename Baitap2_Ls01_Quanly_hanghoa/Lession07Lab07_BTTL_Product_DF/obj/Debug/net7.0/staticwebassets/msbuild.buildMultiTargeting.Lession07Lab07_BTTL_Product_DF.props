@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Lession07Lab07_BTTL_Product_DF.props" />
+</Project>
