@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Lession07Lab_BTTL_Bai1_Areas.props" />
-</Project>

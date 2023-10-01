@@ -35,7 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lession07Lab_BTTL_Bai1_Area
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lession07Lab07_BTTL_Bai2_NetCore_MVC_Product", "Lession07Lab07_BTTL_Bai2_NetCore_MVC_Product\Lession07Lab07_BTTL_Bai2_NetCore_MVC_Product.csproj", "{FBAF14C8-D22F-440E-97E2-65F3F0E817BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lession07Lab07_BTTL_Product_DF", "Lession07Lab07_BTTL_Product_DF\Lession07Lab07_BTTL_Product_DF.csproj", "{B7DFE142-00CA-4BE7-BCE6-1EFBEC630E31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lession07Lab07_BTTL_Product_DF", "Lession07Lab07_BTTL_Product_DF\Lession07Lab07_BTTL_Product_DF.csproj", "{B7DFE142-00CA-4BE7-BCE6-1EFBEC630E31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lession08Lab08_Product_Demo", "Lession08Lab08_Product_Demo\Lession08Lab08_Product_Demo.csproj", "{B8B168B0-4DC1-4824-A467-24D387DD3D88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson08_Lab08_Demo_Product", "Lesson08_Lab08_Demo_Product\Lesson08_Lab08_Demo_Product.csproj", "{EBA4A0EA-2806-4BFA-9575-BDC6DA140BCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +115,14 @@ Global
 		{B7DFE142-00CA-4BE7-BCE6-1EFBEC630E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7DFE142-00CA-4BE7-BCE6-1EFBEC630E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7DFE142-00CA-4BE7-BCE6-1EFBEC630E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8B168B0-4DC1-4824-A467-24D387DD3D88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B168B0-4DC1-4824-A467-24D387DD3D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B168B0-4DC1-4824-A467-24D387DD3D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B168B0-4DC1-4824-A467-24D387DD3D88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA4A0EA-2806-4BFA-9575-BDC6DA140BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA4A0EA-2806-4BFA-9575-BDC6DA140BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA4A0EA-2806-4BFA-9575-BDC6DA140BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA4A0EA-2806-4BFA-9575-BDC6DA140BCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

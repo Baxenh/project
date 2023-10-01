@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Lession07_Lab07_BTTLBai2_NetCore.props" />
-</Project>

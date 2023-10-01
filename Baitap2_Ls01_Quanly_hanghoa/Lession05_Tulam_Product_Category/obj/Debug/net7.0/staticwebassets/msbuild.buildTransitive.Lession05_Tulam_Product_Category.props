@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Lession05_Tulam_Product_Category.props" />
-</Project>
