@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Lession07_NetCoreLab07.props" />
+</Project>

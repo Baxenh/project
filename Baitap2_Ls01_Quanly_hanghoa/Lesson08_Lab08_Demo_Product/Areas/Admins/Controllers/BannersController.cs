@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Lession08Lab08_Product_Demo.Models;
 using Lesson08_Lab08_Demo_Product.Models;
+using X.PagedList;
 
 namespace Lesson08_Lab08_Demo_Product.Areas.Admins.Controllers
 {
@@ -21,11 +22,21 @@ namespace Lesson08_Lab08_Demo_Product.Areas.Admins.Controllers
         }
 
         // GET: Admins/Banners
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? name, int page = 1)
         {
-              return _context.Banners != null ? 
-                          View(await _context.Banners.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Banners'  is null.");
+            //Phân trang - số trang trên 1 trang
+            int limit = 5;
+
+
+            //Tìm kiếm start
+            var banner = await _context.Banners.OrderBy(x => x.Id).ToPagedListAsync(page, limit);
+            if (!string.IsNullOrEmpty(name))
+            {
+                banner = await _context.Banners.Where(x => x.Name.Contains(name)).OrderBy(x => x.Id).ToPagedListAsync(page, limit);
+            }
+            ViewBag.keyword = name;
+            return View(banner);
+            //tìm kiếm end
         }
 
         // GET: Admins/Banners/Details/5
@@ -61,6 +72,36 @@ namespace Lesson08_Lab08_Demo_Product.Areas.Admins.Controllers
         {
             if (ModelState.IsValid)
             {
+                //// upload ảnh
+                var files = HttpContext.Request.Form.Files;
+                //tìm kiếm ảnh
+                // Kiểm tra xem tệp ảnh có tồn tại không
+                //if (System.IO.File.Exists("wwwroot/" + resultObj.Image))
+                //{
+                //    // Xóa tệp ảnh
+                //    System.IO.File.Delete("wwwroot/" + resultObj.Image);
+                //}
+                //else
+                if (files.Count() > 0 && files[0].Length > 0)
+                {
+                    var file = files[0];
+
+                    var FileName = file.FileName;
+                    // upload ảnh vào thư mục wwwroot\\images\\Banners
+                    var path = Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot\\images\\banners", FileName);
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+
+                       banner.Image = "/images/banners/" + FileName; // gán tên ảnh cho thuộc tinh Image
+                    }
+                }
+                banner.CreatedDate = DateTime.Now;
+
+
+                //Thêm mới 
+
                 _context.Add(banner);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -100,6 +141,22 @@ namespace Lesson08_Lab08_Demo_Product.Areas.Admins.Controllers
             {
                 try
                 {
+                    var files = HttpContext.Request.Form.Files;
+                    if (files.Count() > 0 && files[0].Length > 0)
+
+                    {
+                        var file = files[0];
+
+                        var FileName = file.FileName;
+                        // upload ảnh vào thư mục wwwroot\\iamges\\banners
+                        var path = Path.Combine(Directory.GetCurrentDirectory(),
+                        "wwwroot\\iamges\\banners", FileName);
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            file.CopyTo(stream);
+                            banner.Image = "/images/banners/" + FileName; // gán tên ảnh cho thuộc tinh Image
+                        }
+                    }
                     _context.Update(banner);
                     await _context.SaveChangesAsync();
                 }

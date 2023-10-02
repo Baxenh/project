@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Lession06_DbConText.props" />
+</Project>

@@ -1,4 +1,8 @@
-﻿@model IEnumerable<Lesson08_Lab08_Demo_Product.Models.OrderDetail>
+﻿@* @model IEnumerable<Lesson08_Lab08_Demo_Product.Models.OrderDetail> *@
+@model X.PagedList.IPagedList<Lesson08_Lab08_Demo_Product.Models.OrderDetail>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+
 
 @{
     ViewData["Title"] = "Index";
@@ -7,23 +11,30 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<div class="row">
+    <form action="" method="get" class="form-inline">
+        <div class="form-group">
+            <label class="sr-only" for="keyword">Tìm theo tên loại</label>
+            <input class="form-control" name="name" id="keyword" placeholder="Nhập tên cần tìm">
+        </div>
+        <button type="submit" class="btn btn-default mr-1"><i class="fas fa-search"></i></button>
+        <a asp-action="Create" class="btn btn-primary"><i class="fas fa-plus"></i>   Thêm mới</a>
+    </form>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Quantity)
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Quantity)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Order)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Order)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Product)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Product)
             </th>
             <th></th>
         </tr>
@@ -52,3 +63,10 @@
 }
     </tbody>
 </table>
+    <hr />
+    @Html.PagedListPager(Model,page=>Url.Action("Index",new {page=page}),new
+    PagedListRenderOptions{
+    LiElementClasses = new string[] { "page-item" },
+    PageClasses = new string[] { "page-link" }
+    })
+</div>

@@ -1,4 +1,9 @@
-﻿@model IEnumerable<Lesson08_Lab08_Demo_Product.Models.Orders>
+﻿@* @model IEnumerable<Lesson08_Lab08_Demo_Product.Models.Orders> *@
+@model X.PagedList.IPagedList<Lesson08_Lab08_Demo_Product.Models.Orders>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+
+
 
 @{
     ViewData["Title"] = "Danh sách Order";
@@ -19,22 +24,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CustomerId)
+                @Html.DisplayNameFor(model => model.FirstOrDefault().CustomerId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Address)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Address)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedDate)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().CreatedDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Status)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Status)
             </th>
             <th></th>
         </tr>
@@ -69,4 +74,10 @@
 }
     </tbody>
 </table>
+<hr />
+    @Html.PagedListPager(Model,page=>Url.Action("Index",new {page=page}),new
+    PagedListRenderOptions{
+    LiElementClasses = new string[] { "page-item" },
+    PageClasses = new string[] { "page-link" }
+    })
 </div>

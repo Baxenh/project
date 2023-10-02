@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "08WKnfWTQ/FK0tCUvvVOv+7a2NdEc5fiS1j6taLOP7E=",
+  "Hash": "4cs410G3o+a9Tdr1dxq38A59KlK5qj0EwM+/hCJjMOU=",
   "Source": "Lesson08_Lab08_Demo_Product",
   "BasePath": "_content/Lesson08_Lab08_Demo_Product",
   "Mode": "Default",
@@ -1273,6 +1273,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Learning\\GitHub\\project\\Baitap2_Ls01_Quanly_hanghoa\\Lesson08_Lab08_Demo_Product\\wwwroot\\Images\\blogs\\ao2.jpg",
+      "SourceId": "Lesson08_Lab08_Demo_Product",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\GitHub\\project\\Baitap2_Ls01_Quanly_hanghoa\\Lesson08_Lab08_Demo_Product\\wwwroot\\",
+      "BasePath": "_content/Lesson08_Lab08_Demo_Product",
+      "RelativePath": "Images/blogs/ao2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\blogs\\ao2.jpg"
     },
     {
       "Identity": "D:\\Learning\\GitHub\\project\\Baitap2_Ls01_Quanly_hanghoa\\Lesson08_Lab08_Demo_Product\\wwwroot\\Images\\categories\\ao4.jpg",
